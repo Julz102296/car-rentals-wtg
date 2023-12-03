@@ -41,7 +41,7 @@ function ProductCard() {
                         
                         const {brand, model, imageURL, price, location, description, id, capacity, size} = item;
                         return (
-                                <div onClick={()=> window.location.href = `/cardetails/${id}`} key={index} className="block rounded-lg p-5 bg-white shadow-sm shadow-indigo-100">
+                                <div key={index} className="block rounded-lg p-5 bg-white shadow-sm shadow-indigo-100">    {/*onClick={()=> window.location.href = `/cardetails/${id}`}*/ }
                                 <img
                                     alt="Home"
                                     src={imageURL}

@@ -5,6 +5,7 @@ import { addToCart } from '../../redux/cartSlice'
 import { toast } from 'react-toastify'
 import Filter from '../../components/filter/Filter'
 import Layout from '../../components/layout/Layout'
+import { Link } from 'react-router-dom'
 
 function AllCars() {
   const context = useContext(myContext)
@@ -46,7 +47,7 @@ function AllCars() {
                         return (
                             <div className="p-4 drop-shadow-lg " >
                             <div>
-                            <div onClick={()=> window.location.href = `/cardetails/${id}`} key={index} className="block rounded-lg p-5 bg-slate-100 shadow-sm shadow-indigo-100">
+                            <div key={index} className="block rounded-lg p-5 bg-slate-100 shadow-sm shadow-indigo-100">
                                 <img
                                     alt="Home"
                                     src={imageURL}
@@ -110,12 +111,14 @@ function AllCars() {
                                         </div>
                                 
                                 <div className="sm:flex sm:items-end sm:justify-end">
+                                <Link to={`/cardetails/${id}`}>
                                 <p
                                     onClick={() => deleteCart(item)} 
                                     className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
                                 >
                                     View Details
                                 </p>
+                                </Link>
                                 </div>
                                 </div>
                             
