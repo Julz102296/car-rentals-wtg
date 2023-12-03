@@ -18,7 +18,7 @@ export default function Modal({ name, address, pincode, phoneNumber, setName, se
                 <button
                     type="button"
                     onClick={openModal}
-                    className="w-full  bg-blue-600 py-2 text-center rounded-lg text-white font-bold"
+                    className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
                 >
                     Book Now
                 </button>

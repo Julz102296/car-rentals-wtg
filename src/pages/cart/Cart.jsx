@@ -326,7 +326,7 @@ function Cart() {
                 <label>Return Date</label>
                 <input
                  type="date"
-                 className="px-4 py-3 w-full rounded-md bg-gray-50 border-transparent outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}
+                 className="px-4 py-3 w-full rounded-md bg-gray-200 border-transparent outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}
                  value={returnDate}
                  onChange={(e) => setReturnDate(e.target.value)}
                 />

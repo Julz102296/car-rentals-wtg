@@ -3,6 +3,7 @@ import myContext from '../../context/data/myContext'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../redux/cartSlice'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 function ProductCard() {
     const context = useContext(myContext)
@@ -24,12 +25,12 @@ function ProductCard() {
 
     return (
         
-        <section className="text-gray-600 body-font bg-gray-100">
+        <section className="text-gray-600 body-font bg-white">
             <div className="container px-5 py-8 md:py-16 mx-auto">
                 <div className="lg:w-1/2 w-full mb-6 lg:mb-10">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 
                     text-gray-900" style={{ color: mode === 'dark' ? 'white' : '' }}>
-                    Updated Rates</h1>
+                    </h1>
                     <div className="h-1 w-20 bg-blue-600 rounded"></div>
                 </div>
 
@@ -41,12 +42,13 @@ function ProductCard() {
                         
                         const {brand, model, imageURL, price, location, description, id, capacity, size} = item;
                         return (
-                                <div key={index} className="block rounded-lg p-5 bg-white shadow-sm shadow-indigo-100">    {/*onClick={()=> window.location.href = `/cardetails/${id}`}*/ }
+                                <div key={index} className="block rounded-md p-5 bg-white transition hover:shadow-2xl">    {/*onClick={()=> window.location.href = `/cardetails/${id}`}*/ }
                                 <img
                                     alt="Home"
-                                    src={imageURL}
+                                    src={imageURL}                          
                                     className="h-56 w-full rounded-md object-cover"
                                 />
+                                {/**className="flex bg-white transition hover:shadow-xl my-2" */}
 
                                 <div className="mt-2">
                                     <dl>
@@ -105,12 +107,13 @@ function ProductCard() {
                                         </div>
                                 
                                 <div className="sm:flex sm:items-end sm:justify-end">
+                                <Link to={`/cardetails/${id}`}>
                                 <p
-                                    onClick={() => deleteCart(item)} 
                                     className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
                                 >
                                     View Details
                                 </p>
+                                </Link>
                                 </div>
                                 </div>
 

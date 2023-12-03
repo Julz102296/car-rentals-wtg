@@ -38,16 +38,16 @@ function AllCars() {
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900" style={{ color: mode === 'dark' ? 'white' : '' }}>All Cars</h1>
                     <div className="h-1 w-20 bg-blue-600 rounded"></div>
                 </div>
-
+{/**className="flex bg-white transition hover:shadow-xl my-2" */}
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
                     {product.filter((obj)=> obj.brand.toLowerCase().includes(searchkey))
                      .filter((obj) => obj.description.toUpperCase().includes(filtertype))
                      .filter((obj) => obj.location.includes(filterlocation)).map((item, index) => {
                         const { brand, price, model, description, location, size, capacity, imageURL, id } = item;
                         return (
-                            <div className="p-4 drop-shadow-lg " >
                             <div>
-                            <div key={index} className="block rounded-lg p-5 bg-slate-100 shadow-sm shadow-indigo-100">
+                            <div>
+                            <div key={index} className="block p-5 bg-white transition hover:shadow-xl my-2 ">
                                 <img
                                     alt="Home"
                                     src={imageURL}
@@ -69,6 +69,7 @@ function AllCars() {
                                         <dd className="font-medium">{model}</dd>
                                     </div>
                                     </dl>
+                                    <hr className='my-2'/>
 
                                     <div className="mt-6 flex items-center gap-8 text-xs">
                                     <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
@@ -113,7 +114,6 @@ function AllCars() {
                                 <div className="sm:flex sm:items-end sm:justify-end">
                                 <Link to={`/cardetails/${id}`}>
                                 <p
-                                    onClick={() => deleteCart(item)} 
                                     className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
                                 >
                                     View Details
