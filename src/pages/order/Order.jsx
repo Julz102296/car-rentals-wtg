@@ -13,6 +13,7 @@ function Order() {
       {order.length > 0 ?
         (<>
           <div className=" h-full pt-10">
+          <h1 className="mb-10 text-center text-2xl font-bold">Booking List</h1>
             {
               order.filter(obj => obj.userid == userid).map((order) => {
                 // order.cartItems.map()

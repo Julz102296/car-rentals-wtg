@@ -313,27 +313,27 @@ function Cart() {
           <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/4" style={{ backgroundColor: mode === 'dark' ? 'rgb(32 33 34)' : '', color: mode === 'dark' ? 'white' : '', }}>
             <div>
               <div>
-              <div>
-                <label>Pickup Date</label>
+              <div className='py-2'>
+                <label className="font-medium">Pickup Date</label>
                 <input
                   type="date"
-                  className="px-4 py-3 w-full rounded-md bg-gray-50 border-transparent outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}
+                  className="px-4 py-3 w-full rounded-md bg-gray-200 border-transparent outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}
                   value={pickupDate}
                   onChange={(e) => setPickupDate(e.target.value)}
                 />
                 </div>
-                <div>
-                <label>Return Date</label>
+                <div className='py-2'>
+                <label className="font-medium">Return Date</label>
                 <input
                  type="date"
-                 className="px-4 py-3 w-full rounded-md bg-gray-200 border-transparent outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}
+                 className="px-4 py-3 w-full rounded-md bg-gray-200 text border-transparent outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}
                  value={returnDate}
                  onChange={(e) => setReturnDate(e.target.value)}
                 />
               </div>
               <hr />
-              <div>
-                <label htmlFor="">Total Days</label>
+              <div className='py-2'>
+                <label className="font-medium">Total Days</label>
                 <p>{daysDifference}</p>
                 <hr />
               </div>
@@ -348,12 +348,13 @@ function Cart() {
               <p className="text-gray-700" style={{ color: mode === 'dark' ? 'white' : '' }}>PHP {addFee}</p>
             </div>
             <hr className="my-4" />
-            <div className="flex justify-between mb-3">
-              <p className="text-lg font-bold" style={{ color: mode === 'dark' ? 'white' : '' }}>Total</p>
+            <div className="flex justify-between bg-gray-200 px-2 mb-3">
+              <p className="text-lg font-bold " style={{ color: mode === 'dark' ? 'white' : '' }}>Total</p>
               <div className>
                 <p className="mb-1 text-lg font-bold" style={{ color: mode === 'dark' ? 'white' : '' }}>PHP {grandTotal}</p>
               </div>
             </div>
+
             {/*<Modal />*/}
             <Modal 
               name={name} 
@@ -372,7 +373,14 @@ function Cart() {
             >
               Book Now
             </button>*/}
+            <hr className='mt-5'/>
+            <div className='py-2 '>
+              <p className=" text-gray-800 text-sm font-medium ">Pickup date: {pickupDate}</p>
+              <p className=" text-gray-800 text-sm font-medium ">Return date: {returnDate}</p>
+              
+            </div>
           </div>
+          
         </div>
       </div>
       <Banner />

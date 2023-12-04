@@ -49,12 +49,12 @@ export default function Modal({ name, address, pincode, phoneNumber, setName, se
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl p-2  text-left align-middle shadow-xl transition-all bg-gray-100">
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-md mt-10 p-2 text-left align-middle shadow-xl transition-all bg-gray-100">
 
                                     <section className="">
                                         <div className="flex flex-col items-center justify-center py-8 mx-auto  lg:py-0">
                                           
-                                            <div className="w-full  rounded-lg md:mt-0 sm:max-w-md xl:p-0 ">
+                                            <div className="w-full md:mt-0 sm:max-w-md xl:p-0 ">
                                                 <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
 
                                                     <form className="space-y-4 md:space-y-6" action="#">
@@ -76,7 +76,7 @@ export default function Modal({ name, address, pincode, phoneNumber, setName, se
                                                         </div>
 
                                                     </form>
-                                                    <button onClick={() => {payNow(); closeModal()}}  type="button" className="focus:outline-none w-full text-white bg-green-600 hover:bg-green-800  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 ">Proceed to Payment</button>
+                                                    <button onClick={() => {payNow(); closeModal()}}  type="button" className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400">Proceed to Payment</button>
                                                 </div>
                                             </div>
                                         </div>
