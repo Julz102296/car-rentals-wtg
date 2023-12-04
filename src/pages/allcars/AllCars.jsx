@@ -39,7 +39,7 @@ function AllCars() {
                     <div className="h-1 w-20 bg-blue-600 rounded"></div>
                 </div>
 {/**className="flex bg-white transition hover:shadow-xl my-2" */}
-                <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+                <div className="grid grid-cols-1 gap-2 lg:grid-cols-4 lg:gap-6">
                     {product.filter((obj)=> obj.brand.toLowerCase().includes(searchkey))
                      .filter((obj) => obj.description.toUpperCase().includes(filtertype))
                      .filter((obj) => obj.location.includes(filterlocation)).map((item, index) => {

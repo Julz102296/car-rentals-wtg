@@ -34,7 +34,7 @@ function ProductCard() {
                     <div className="h-1 w-20 bg-blue-600 rounded"></div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-2 lg:grid-cols-4 lg:gap-2">
+                <div className="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-8">
 
                     {product.filter((obj) => obj.brand.toLowerCase().includes(searchkey))
                     .filter((obj) => obj.description.toUpperCase().includes(filtertype))
