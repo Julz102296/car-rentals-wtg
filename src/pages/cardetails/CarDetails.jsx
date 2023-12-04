@@ -28,6 +28,7 @@ function CarDetails() {
         } catch (error) {
             console.log(error)
             setLoading(false)
+            
         }
     }
 
@@ -46,7 +47,7 @@ function CarDetails() {
     // add to cart
     const addCart = (products) => {
         dispatch(addToCart(products))
-        toast.success('Added to');
+        toast.success('Reserved! Click Cart to Check Rates.');
     }
 
     useEffect(() => {
